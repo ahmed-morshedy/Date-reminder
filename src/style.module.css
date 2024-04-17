@@ -1,0 +1,18 @@
+.name {
+  color: red;
+}
+
+.date:not(:nth-last-child(1)) {
+  border-bottom: 1px solid black;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+.col {
+  display: flex;
+  align-items: center;
+}
+.img {
+  border-radius: 50%;
+  width: 70px;
+  margin-right: 20px;
+}
