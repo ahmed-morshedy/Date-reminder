@@ -17,14 +17,36 @@
   margin-right: 20px;
 }
 
+.btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 20px;
+}
+
 @media (max-width: 767px) {
   .img {
     display: none;
   }
 }
 
+/* d-flex justify-content-center align-items-center border border-top-0 border-bottom-0 */
+.time {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-inline: 1px solid #c3c3c3;
+}
+
 @media (max-width: 576px) {
-  .img {
-    display: none;
+  .btns {
+    column-gap: 30px;
+    margin-top: 10px;
+  }
+  .time {
+    border-right: none;
+  }
+  .col {
+    justify-content: center;
   }
 }

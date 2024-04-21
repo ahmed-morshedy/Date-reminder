@@ -19,7 +19,7 @@ function Dates(props) {
                 <Accordion.Header>Date {`#${i + 1}`}</Accordion.Header>
                 <Accordion.Body>
                   <Row className={style.date} key={i}>
-                    <Col className={style.col} sm={3} lg={4} md={4} xs={3}>
+                    <Col className={style.col} sm={3} lg={4} md={4} xs={8}>
                       <div>
                         <img src={imgSrc} className={style.img}></img>
                       </div>
@@ -27,31 +27,17 @@ function Dates(props) {
                         <p className="d-inline">{p.name}</p>
                       </div>
                     </Col>
-                    <Col
-                      xs={3}
-                      sm={3}
-                      md={2}
-                      lg={4}
-                      className="d-flex justify-content-center align-items-center border border-top-0 border-bottom-0 "
-                    >
+                    <Col xs={4} sm={3} md={2} lg={4} className={style.time}>
                       <p className="fs-6">{p.date}</p>
                     </Col>
-                    <Col
-                      xs={6}
-                      sm={6}
-                      md={6}
-                      lg={4}
-                      className=" d-flex align-items-center justify-content-center  gap-0 column-gap-3"
-                    >
+                    <Col xs={12} sm={6} md={6} lg={4} className={style.btns}>
                       <Button
                         variant="success"
-                        className="  btn-sm"
                         onClick={() => props.handelCompleteBtn(i)}
                       >
-                        Completed
+                        Finished
                       </Button>
                       <Button
-                        className=" btn-sm"
                         variant="danger"
                         onClick={() => props.handelCancelBtn(i)}
                       >
