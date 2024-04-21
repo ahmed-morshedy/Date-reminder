@@ -16,3 +16,15 @@
   width: 70px;
   margin-right: 20px;
 }
+
+@media (max-width: 767px) {
+  .img {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .img {
+    display: none;
+  }
+}

@@ -10,7 +10,7 @@ function Dates(props) {
   return (
     <>
       {props.person.length == 0 ? (
-        <div className="text-center fs-5 fw-bold">There is no dates today</div>
+        <div className="text-center fs-5 fw-bold ">There is no dates today</div>
       ) : (
         props.person.map((p, i) => {
           return (
@@ -19,7 +19,7 @@ function Dates(props) {
                 <Accordion.Header>Date {`#${i + 1}`}</Accordion.Header>
                 <Accordion.Body>
                   <Row className={style.date} key={i}>
-                    <Col className={style.col} sm={4}>
+                    <Col className={style.col} sm={3} lg={4} md={4} xs={3}>
                       <div>
                         <img src={imgSrc} className={style.img}></img>
                       </div>
@@ -28,23 +28,30 @@ function Dates(props) {
                       </div>
                     </Col>
                     <Col
-                      sm={4}
-                      className="d-flex align-items-center justify-content-center border border-top-0 border-bottom-0 "
+                      xs={3}
+                      sm={3}
+                      md={2}
+                      lg={4}
+                      className="d-flex justify-content-center align-items-center border border-top-0 border-bottom-0 "
                     >
-                      <p className="fs-6 text-center ">{p.date}</p>
+                      <p className="fs-6">{p.date}</p>
                     </Col>
                     <Col
-                      sm={4}
-                      className="text-center d-flex align-items-center justify-content-center"
+                      xs={6}
+                      sm={6}
+                      md={6}
+                      lg={4}
+                      className=" d-flex align-items-center justify-content-center  gap-0 column-gap-3"
                     >
                       <Button
                         variant="success"
-                        className="mx-4"
+                        className="  btn-sm"
                         onClick={() => props.handelCompleteBtn(i)}
                       >
                         Completed
                       </Button>
                       <Button
+                        className=" btn-sm"
                         variant="danger"
                         onClick={() => props.handelCancelBtn(i)}
                       >

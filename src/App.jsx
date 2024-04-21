@@ -3,17 +3,18 @@ import { Container, Row, Col } from "react-bootstrap";
 import Dates from "./Dates";
 import Complete from "./complete";
 import React, { useState } from "react";
+import Add from "./add";
 
 function App() {
   const [persons, setPersons] = useState([
-    { name: "Ahmed", date: "5 Pm" },
+    { name: "Ahmed", date: "05:15" },
     {
       name: "Mohamed",
-      date: "2 Am",
+      date: "20:30",
     },
     {
       name: "Ali",
-      date: "5 Am",
+      date: "17:05",
     },
   ]);
 
@@ -32,13 +33,24 @@ function App() {
     setPersons(deleteP);
   }
 
+  function handelAdd(nP) {
+    setPersons((p) => [...persons, nP]);
+  }
+
   return (
     <Container>
+      <Row className="contain bg-body-tertiary">
+        <Col className="position-relative">
+          <Add add={handelAdd} />
+        </Col>
+      </Row>
       <Row>
         <Col>
-          {persons.length
-            ? `You have ${persons.length} dates today`
-            : "You don't have any dates today"}
+          <div className="fs-5 mt-3 ">
+            {persons.length
+              ? `You have ${persons.length} dates today`
+              : "You don't have any dates today"}
+          </div>
         </Col>
       </Row>
       <Row className={"contain bg-body-tertiary"}>
@@ -58,7 +70,7 @@ function App() {
       </Row>
       <Row>
         <Col>
-          <span>Completed Dates</span>
+          <div className="fs-5 mt-3">Completed Dates</div>
         </Col>
       </Row>
       <Row>

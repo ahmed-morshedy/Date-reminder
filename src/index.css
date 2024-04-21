@@ -46,3 +46,9 @@ h1 {
   box-shadow: 5px 5px 2px #c3c3c3;
   margin-block: 20px;
 }
+
+.alert {
+  position: absolute;
+  right: 0px;
+  top: -15px;
+}
